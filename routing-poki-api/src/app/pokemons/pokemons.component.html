@@ -1,0 +1,7 @@
+<h2>Pokemons</h2>
+<input type="text" [(ngModel)]="filter"/> <-- filter
+<ul *ngFor="let pokemon of pokemons.results">
+  <li *ngIf="pokemon.name.includes(filter)">
+    <a [routerLink]="'/pokemons/'+ pokemon.url.split('/')[pokemon.url.split('/').length-2]">Details about {{pokemon.name}}</a>
+  </li>
+</ul>`
